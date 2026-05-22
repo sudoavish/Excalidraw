@@ -23,7 +23,7 @@ export default function CreateRoomPage() {
                 const data = {
                     name: formData.name,
                 };
-                const response = await axios.post("/create-room", data);
+                const response = await axios.post("/canvas", data);
                 const roomId = response.data.roomId;
                 toast.success("Room created successfully");
                 router.push("/canvas/"+roomId);
